@@ -1,0 +1,14 @@
+name: Parameter Validation
+
+on:
+  pull_request:
+  push:
+
+jobs:
+  check-params:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check parameter mismatch
+        run: |
+          echo "【エラー】判定許容時間がマニフェストと一致しません！"
+          exit 1
